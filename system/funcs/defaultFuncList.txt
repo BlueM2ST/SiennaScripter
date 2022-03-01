@@ -1,0 +1,55 @@
+# default function list for SiennaScripter
+
+# for text
+text
+name
+nvl
+
+# nodes
+create
+destroy
+destroyall
+
+# animations
+moveto
+moveby
+
+# args
+storage
+rule
+group
+scale
+zoom
+shake
+size
+pos
+show
+hide
+play
+volume
+stop
+material
+theme
+fadein
+fadeout
+alpha
+layer
+
+# script
+jump
+return
+back
+var
+if
+toLine
+script
+onclick
+
+# system
+setlayer
+empty
+wait
+print
+call
+autosave
+system
