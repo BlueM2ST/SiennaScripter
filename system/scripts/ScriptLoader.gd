@@ -38,6 +38,15 @@ $nodeID moveto=0,100
 # jump to a new label
 @jump=*secondChapter:this,100
 
+# add text to the game
+This is some text. It will be added to the main textbox
+
+# nvl
+@nvl start
+This text when there is a click 
+will then show this text after it.
+@nvl end
+
 
 # values can also be passed to labels
 *secondChapter:this,that
@@ -51,13 +60,39 @@ $nodeID moveto=0,100
 
 
 
-func _ready():
-	pass
 
+signal all_scripts_loaded
+
+
+func _ready():
+	parser(tokenizer())
+	yield(get_tree(), "idle_frame")
+	emit_signal("all_scripts_loaded")
+
+
+func getAllScriptsFromFile() -> Array:
+	return []
 
 
 # very simple tokenizer
-func tokenizer():
-	pass
+func tokenizer() -> Array:
+	var tokens : Array = []
+	return tokens
 	
+
+func parser(tokens:Array):
+	pass
+
+
+
+
+
+
+
+
+
+
+
+
+
 
